@@ -1,23 +1,27 @@
-import logo from './logo.svg';
 import './App.css';
+import ContenedorVotante from "./components/ContenedorVotante/ContenedorVotante.jsx";
+import ContenedorAutor from './components/ContenedorAutor/ContenedorAutor';
+import DetalleAutor from './components/DetalleAutor/DetalleAutor';
+import Header from './components/Header/Header';
+import Footer from './components/Footer/Footer';
+import Buscador from './components/Buscador/Buscador';
+import { Route, Routes } from 'react-router-dom';
+
+const Home = () => <h1>Home</h1>
 
 function App() {
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header/>
+      <Routes>
+        <Route path="/" element={<Home/>}></Route>
+        <Route path="/autores" element={<ContenedorAutor/>}></Route>
+        <Route path="/autores/:autorID" element={<DetalleAutor/>}></Route>
+        <Route path="/votantes" element={<ContenedorVotante/>}></Route>
+        
+      </Routes>
+      <Footer/>
     </div>
   );
 }
