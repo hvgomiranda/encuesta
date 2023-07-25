@@ -1,13 +1,35 @@
-import data from "../../data_base/autores.json";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { useState } from "react";
-import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons'; 
+import React, { useState } from 'react';
+import BarraBuscar from "../BarraBuscar/BarraBuscar";
+import MostrarAutores from '../MostrarAutores/MostrarAutores'; 
 
-//const handleSubmit = (e) => e.preventDefault();
+const Buscador = ({ autores }) => {
+
+  const [busqueda, setBusqueda] = useState('');
+
+  const filtrarAutores = () => {
+    return autores.filter(
+      (autor) =>
+        autor.Nombre.toLowerCase().includes(busqueda.toLowerCase()) ||
+        autor.Apellido.toLowerCase().includes(busqueda.toLowerCase()) ||
+        autor.País.toLowerCase().includes(busqueda.toLowerCase())
+    );
+  };
+
+  return (
+    <div>
+      <BarraBuscar onChange={(valor) => setBusqueda(valor)} />
+      <MostrarAutores autores={filtrarAutores()} />
+    </div>
+  );
+};
+
+export default Buscador;
+
+/*const handleSubmit = (e) => e.preventDefault();
 
 const Buscador = () =>{
 
-    /*const [busqueda, setBusqueda] = useState("");
+    const [busqueda, setBusqueda] = useState("");
 
     const handleBuscador = e => {
         setBusqueda(e.target.value);
@@ -36,7 +58,7 @@ const Buscador = () =>{
                     <FontAwesomeIcon icon={faMagnifyingGlass} />
                 </button>
         </div>
-    )*/
+    )
 }
 
-export default Buscador
+export default Buscador*/

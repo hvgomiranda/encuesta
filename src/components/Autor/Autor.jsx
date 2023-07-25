@@ -42,5 +42,5 @@ const Autor = ( {thisAutor} ) => {
           </div>
         )
 }
- {autor} 
+
 export default Autor
