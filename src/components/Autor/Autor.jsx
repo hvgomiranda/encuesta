@@ -1,46 +1,45 @@
 import React  from 'react'
-import Card from 'react-bootstrap/Card';
-import dataVotante from "../../data_base/votantes.json";
+import "./Autor.css";
 
-const Autor = ( {thisAutor} ) => {
+const Autor = ( {autor} ) => {
     
-    let listaVotantes = [];
+    /*let listaVotantes = [];
 
     for(let votante of dataVotante){
-        if(votante.Apellido__1 === thisAutor.Apellido && votante.Nombre__1 === thisAutor.Nombre){
+        if(votante.Apellido__1 === autor.Apellido && votante.Nombre__1 === autor.Nombre){
             listaVotantes.push(`${votante.Nombre}, ${votante.Apellido}`);
-        } else if(votante.Apellido__2 === thisAutor.Apellido && votante.Nombre__2 === thisAutor.Nombre){
+        } else if(votante.Apellido__2 === autor.Apellido && votante.Nombre__2 === autor.Nombre){
             listaVotantes.push(`${votante.Nombre}, ${votante.Apellido}`);
-        } else if(votante.Apellido__3 === thisAutor.Apellido && votante.Nombre__3 === thisAutor.Nombre){
+        } else if(votante.Apellido__3 === autor.Apellido && votante.Nombre__3 === autor.Nombre){
             listaVotantes.push(`${votante.Nombre}, ${votante.Apellido}`);
-        } else if(votante.Apellido__4 === thisAutor.Apellido && votante.Nombre__4 === thisAutor.Nombre){
+        } else if(votante.Apellido__4 === autor.Apellido && votante.Nombre__4 === autor.Nombre){
             listaVotantes.push(`${votante.Nombre}, ${votante.Apellido}`);
-        } else if(votante.Apellido__5 === thisAutor.Apellido && votante.Nombre__5 === thisAutor.Nombre){
+        } else if(votante.Apellido__5 === autor.Apellido && votante.Nombre__5 === autor.Nombre){
             listaVotantes.push(`${votante.Nombre}, ${votante.Apellido}`);
         }
     }
+
+    <Card.Text>
+    Votado por: {listaVotantes.map((votante, i) => (
+        <div key={i}>
+            {votante}
+        </div>
+    ))}
+    </Card.Text>*/
     
     return(
         <div>
-            <Card className="tarjeta" style={{ width: '18rem' }}>
-                <Card.Body>
-                    <Card.Title className="tarjeta_titulo">{thisAutor.Nombre} {thisAutor.Apellido}</Card.Title>
-                    <Card.Subtitle className="mb-2 text-muted">{thisAutor.País}</Card.Subtitle>
-                    <Card.Subtitle className="mb-2 text-muted">Votos: {thisAutor["# votos"]}</Card.Subtitle>
-                    <Card.Text>
-                        Votado por: {listaVotantes.map((votante, i) => (
-                            <div key={i}>
-                                {votante}
-                            </div>
-                        ))}
-                    </Card.Text>
-                    <Card.Text>
+            <div className="tarjetaAutor" style={{ width: '18rem' }}>
+                
+                    <p className="tarjeta_titulo">{autor.Nombre} {autor.Apellido}</p>
+                    <p className="mb-2 text-muted">{autor.País}</p>
+                    <p className="mb-2 text-muted">Votos: {autor["# votos"]}</p>
+                    <p>
                         BIOGRAFÍA
-                    </Card.Text>
-                </Card.Body>
-            </Card>
+                    </p>
+            </div>
           </div>
         )
 }
 
-export default Autor
+export default Autor;

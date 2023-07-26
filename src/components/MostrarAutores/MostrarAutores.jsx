@@ -6,10 +6,9 @@ const MostrarAutores = ({ autores }) => {
 
     <div>
       {autores.map((autor, index) => (
-        <Autor key={index} {...autor}/>
+        <Autor key={index} autor={autor}/>
       ))}
     </div>
-
   )
 }
 
