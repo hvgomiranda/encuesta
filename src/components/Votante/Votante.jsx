@@ -2,7 +2,7 @@ import React  from 'react'
 import { Link } from "react-router-dom";
 import "./Votante.css";
 
-const Autor = ( {votante} ) => {
+const Votante = ( {votante} ) => {
     
     return(
         <div>
@@ -18,4 +18,4 @@ const Autor = ( {votante} ) => {
         )
 }
 
-export default Autor;
+export default Votante;
