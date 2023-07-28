@@ -6,7 +6,8 @@ const Header = () => {
         <div className="header">
             <h1 className="logo"><Link to="/encuesta">Encuesta de autores</Link></h1>
             <div className="navbar">
-                <h1><Link to="/buscar">Buscar autores</Link></h1>
+                <h1><Link to="/buscarAutores">Buscar autores</Link></h1>
+                <h1><Link to="/buscarVotantes">Buscar votantes</Link></h1>
             </div>
         </div>
     )

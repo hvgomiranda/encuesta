@@ -1,0 +1,13 @@
+.headerBusqueda{
+    display: flex;
+    flex-direction: column;
+}
+
+.headerBusqueda__orden{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    height: 5vh;
+    margin: 0px 0px 30px 35px;
+    height: 3rem;
+}

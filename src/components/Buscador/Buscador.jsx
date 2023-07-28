@@ -3,6 +3,7 @@ import BarraBuscar from "../BarraBuscar/BarraBuscar";
 import MostrarAutores from '../MostrarAutores/MostrarAutores'; 
 import SeleccionadorBuscar from '../SeleccionadorBuscar/SeleccionadorBuscar';
 import SeleccionadorOrdenar from '../SeleccionadorOrdenar/SeleccionadorOrdenar';
+import "./Buscador.css";
 
 const Buscador = ({ autores }) => {
 
@@ -33,13 +34,13 @@ const Buscador = ({ autores }) => {
     return autoresFiltrados;
   };
 
-  
-
   return (
-    <div>
+    <div className='headerBusqueda'>
       <BarraBuscar onChange={(valor) => setBusqueda(valor)} />
-      <SeleccionadorBuscar onChange={(valor) => setNacionalidad(valor)} />
-      <SeleccionadorOrdenar onChange={(valor) => setOrden(valor)}/>
+      <div className='headerBusqueda__orden'>
+        <SeleccionadorBuscar onChange={(valor) => setNacionalidad(valor)} />
+        <SeleccionadorOrdenar onChange={(valor) => setOrden(valor)}/>
+      </div>
       <MostrarAutores autores={filtrarAutores()} />
     </div>
   );

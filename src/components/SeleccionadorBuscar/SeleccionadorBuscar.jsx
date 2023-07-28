@@ -1,4 +1,5 @@
 import React from 'react'
+import "./SeleccionadorBuscar.css"
 
 const SeleccionadorBuscar = ({ onChange }) => {
 
@@ -7,7 +8,7 @@ const SeleccionadorBuscar = ({ onChange }) => {
       };
 
     return (
-      <select name="País" id="País" onChange={handleChange}>
+      <select className='seleccionadorBuscar' name="País" id="País" onChange={handleChange}>
         <option value="Todos">Todos</option>
         <option value="Argentina">Argentina</option>
         <option value="Bolivia">Bolivia</option>

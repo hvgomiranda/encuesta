@@ -1,4 +1,5 @@
 import React from 'react';
+import "./SeleccionadorOrdenar.css";
 
 const SeleccionadorOrdenar = ({ onChange }) =>{
     
@@ -7,7 +8,7 @@ const SeleccionadorOrdenar = ({ onChange }) =>{
       };
 
     return(
-        <select name="Orden" id="Orden" onChange={handleChange}>
+        <select className='seleccionadorOrdenar' name="Orden" id="Orden" onChange={handleChange}>
             <option value="A - Z">A - Z</option>
             <option value="Z - A">Z - A</option>
             <option value="Votos (mayor a menor)">Votos (mayor a menor)</option>
