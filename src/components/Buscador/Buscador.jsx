@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import BarraBuscar from "../BarraBuscar/BarraBuscar";
-import MostrarAutores from '../MostrarAutores/MostrarAutores'; 
-import SeleccionadorBuscar from '../SeleccionadorBuscar/SeleccionadorBuscar';
+import MostrarAutores from '../MostrarAutores/MostrarAutores';
 import SeleccionadorOrdenar from '../SeleccionadorOrdenar/SeleccionadorOrdenar';
 import "./Buscador.css";
 
@@ -10,10 +9,15 @@ const Buscador = ({ autores }) => {
   const [busqueda, setBusqueda] = useState("");
   const [nacionalidad, setNacionalidad] = useState("Todos");
   const [orden, setOrden] = useState("A - Z");
+  const [genero, setGenero] = useState("Todos");
+
+  let valoresOrden = ["A - Z", "Z - A", "Votos (mayor a menor)", "Votos (menor a mayor)"];
+  let valoresNacionalidad = ["Todos", "Argentina", "Bolivia", "Brasil", "Chile", "Colombia", "Costa Rica", "Cuba", "Ecuador", "El Salvador", "Estados Unidos", "Guadeloupe", "Guatemala", "Haití", "Martinica", "México", "Nicaragua", "Panamá", "Paraguay", "Perú", "Puerto Rico", "República Dominicana", "Uruguay", "Venezuela"];
+  let valoresGenero = ["Todos", "Masculino", "Femenino"];
 
   const removeAccents = (str) => {
     return str.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
-  } 
+  }
 
   const filtrarAutores = () => {
     let autoresFiltrados = autores.filter((autor) =>
@@ -24,6 +28,10 @@ const Buscador = ({ autores }) => {
 
     if(nacionalidad !== "Todos"){
       autoresFiltrados = autoresFiltrados.filter((autor) => autor.País === nacionalidad);
+    }
+
+    if(genero !== "Todos"){
+      autoresFiltrados = autoresFiltrados.filter((autor) => autor.Genero === genero);
     }
 
     autoresFiltrados = orden === "A - Z" ? autoresFiltrados.sort((a, b) => a.Apellido.localeCompare(b.Apellido)) : autoresFiltrados;
@@ -38,10 +46,11 @@ const Buscador = ({ autores }) => {
     <div className='headerBusqueda'>
       <BarraBuscar onChange={(valor) => setBusqueda(valor)} />
       <div className='headerBusqueda__orden'>
-        <SeleccionadorBuscar onChange={(valor) => setNacionalidad(valor)} />
-        <SeleccionadorOrdenar onChange={(valor) => setOrden(valor)}/>
+        <SeleccionadorOrdenar onChange={(valor) => setNacionalidad(valor)} values={valoresNacionalidad}/>
+        <SeleccionadorOrdenar onChange={(valor) => setOrden(valor)} values={valoresOrden}/>
+        <SeleccionadorOrdenar onChange={(valor) => setGenero(valor)} values={valoresGenero}/>
       </div>
-      <MostrarAutores autores={filtrarAutores()} />
+      <MostrarAutores autores={filtrarAutores()} formato="medio" />
     </div>
   );
 };

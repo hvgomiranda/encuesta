@@ -1,5 +1,7 @@
 import React from 'react';
 import "./BarraBuscar.css";
+import { Form } from 'react-router-dom';
+import FormBS from 'react-bootstrap/Form';
 
 const BarraBuscar = ({ onChange }) => {
     
@@ -8,10 +10,10 @@ const BarraBuscar = ({ onChange }) => {
   };
 
   return (
-    <div className='barraBuscar'>
-      <h2 className='barraBuscar__titulo'>Buscar</h2>
-      <input className="barraBuscar__input" type="text" onChange={handleChange} placeholder="Escribí el término a buscar" />
-    </div>
+    <FormBS className='barraBuscar'>
+      <FormBS.Label className='barraBuscar__titulo'>Buscar</FormBS.Label>
+      <FormBS.Control className="barraBuscar__input" type="text" onChange={handleChange} placeholder="Escribí el nombre a buscar" />
+    </FormBS>
   );
 };
 

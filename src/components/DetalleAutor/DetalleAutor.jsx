@@ -1,3 +1,4 @@
+import Container from "react-bootstrap/Container";
 import data from "../../data_base/autores.json";
 import dataVotante from "../../data_base/votantes.json";
 import "./DetalleAutor.css";
@@ -24,14 +25,14 @@ const DetalleAutor = () => {
     }
 
     return(
-    <div>
+    <Container>
         <div className="tarjetaDetalleAutor">
             <h3 className="tarjeta_titulo">{thisAutor.Nombre} {thisAutor.Apellido}</h3>
             <p>{thisAutor.País}</p>
-            <p >Votos: {thisAutor["# votos"]}</p>
+            <p >{thisAutor["# votos"]} votos</p>
             <p>
-                Votado por: {listaVotantes.map((votante, i) => (
-                    <Link to={`/votante/${votante.ID}`} key={i}>
+                {listaVotantes.map((votante, i) => (
+                    <Link className="link" to={`/votante/${votante.ID}`} key={i}>
                         {`${votante.Nombre} ${votante.Apellido}`}{i!==listaVotantes.length-1 ? ", " : "."} 
                     </Link>
                 ))}
@@ -40,7 +41,7 @@ const DetalleAutor = () => {
                 BIOGRAFÍA
             </p>
         </div>
-      </div>
+      </Container>
     )
 };
 

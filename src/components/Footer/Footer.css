@@ -2,7 +2,6 @@
     background-color: antiquewhite;
     display: flex;
     flex-direction: row;
-    height: 15vh;
     align-items: center;
     justify-content: space-between;
     padding: 10px 20px;

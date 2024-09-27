@@ -1,9 +1,5 @@
 .header{
-    background-color: #3e8a2f;
-    display: flex;
-    flex-direction: row;
-    height: 15vh;
-    align-items: center;
-    justify-content: space-between;
-    padding: 10px 20px;
+    background-color: #e7e2dc !important;
+    border-bottom: black 1px solid;
+    height: 10vh;
 }

@@ -1,0 +1,12 @@
+.container-home{
+    margin-bottom: 10vh;
+}
+
+.text-home{
+    font-size: 1.5rem;
+}
+
+.top-home{
+    background: rgb(231,226,220);
+    background: linear-gradient(0deg, rgba(231,226,220,1) 0%, rgba(236,222,206,1) 45%, rgba(213,167,113,1) 100%);
+}
