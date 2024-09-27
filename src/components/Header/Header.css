@@ -3,3 +3,10 @@
     border-bottom: black 1px solid;
     height: 10vh;
 }
+
+.nav-dropdown-item:hover,
+.nav-dropdown-item:focus,
+.nav-dropdown-item:active {
+    background-color: transparent !important;
+    color: inherit !important;
+}

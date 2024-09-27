@@ -36,7 +36,7 @@ const Home = ( {autores} ) => {
             </Container>
 
             <Container className="container-home top-home">
-                <h1 className="text-center">Los 10 más votados</h1>
+                <h1 style={{ padding:"20px" }} className="text-center">Los 10 más votados</h1>
                 <MostrarAutores autores={topAutores()} formato={"grande"} />
             </Container>
 

@@ -9,12 +9,12 @@ const Header = () => {
     return(
         <Navbar expand="lg" sticky="top" className="header justify-content-between">
             <Container>
-                <Navbar.Brand><Link  className="link" to="/encuesta">Encuesta de escritores</Link></Navbar.Brand>
+                <Navbar.Brand><Link  className="link" to="/">Encuesta de escritores</Link></Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse className="justify-content-end">
                 <NavDropdown title="Buscar" id="basic-nav-dropdown" className="ms-4">
-                    <NavDropdown.Item><Link className="link" to="/buscarAutores">Buscar autores</Link></NavDropdown.Item>
-                    <NavDropdown.Item><Link className="link" to="/buscarVotantes">Buscar votantes</Link></NavDropdown.Item>
+                    <NavDropdown.Item className="nav-dropdown-item"><Link className="link" to="/buscarAutores">Buscar autores</Link></NavDropdown.Item>
+                    <NavDropdown.Item className="nav-dropdown-item"><Link className="link" to="/buscarVotantes">Buscar votantes</Link></NavDropdown.Item>
                 </NavDropdown>
                 <Nav.Item className="ms-4">Editorial</Nav.Item>
                 <Nav.Item className="ms-4">Sobre nosotros</Nav.Item>

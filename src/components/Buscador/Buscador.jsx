@@ -3,6 +3,7 @@ import BarraBuscar from "../BarraBuscar/BarraBuscar";
 import MostrarAutores from '../MostrarAutores/MostrarAutores';
 import SeleccionadorOrdenar from '../SeleccionadorOrdenar/SeleccionadorOrdenar';
 import "./Buscador.css";
+import { Form } from 'react-bootstrap';
 
 const Buscador = ({ autores }) => {
 
@@ -41,16 +42,18 @@ const Buscador = ({ autores }) => {
 
     return autoresFiltrados;
   };
+  //<SeleccionadorOrdenar onChange={(valor) => setGenero(valor)} values={valoresGenero}/>
 
   return (
-    <div className='headerBusqueda'>
-      <BarraBuscar onChange={(valor) => setBusqueda(valor)} />
-      <div className='headerBusqueda__orden'>
-        <SeleccionadorOrdenar onChange={(valor) => setNacionalidad(valor)} values={valoresNacionalidad}/>
-        <SeleccionadorOrdenar onChange={(valor) => setOrden(valor)} values={valoresOrden}/>
-        <SeleccionadorOrdenar onChange={(valor) => setGenero(valor)} values={valoresGenero}/>
-      </div>
-      <MostrarAutores autores={filtrarAutores()} formato="medio" />
+    <div>
+      <Form className='headerBusqueda'>
+        <BarraBuscar onChange={(valor) => setBusqueda(valor)} />
+        <div className='headerBusqueda__orden'>
+          <SeleccionadorOrdenar onChange={(valor) => setNacionalidad(valor)} values={valoresNacionalidad}/>
+          <SeleccionadorOrdenar onChange={(valor) => setOrden(valor)} values={valoresOrden}/>
+        </div>
+      </Form>
+        <MostrarAutores autores={filtrarAutores()} formato="medio" />
     </div>
   );
 };

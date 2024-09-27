@@ -6,5 +6,6 @@
 }
 
 .card:hover {
-    background-color: #fa9fb0; 
+    background-color: #ecdece; 
+    color: white;
 }
