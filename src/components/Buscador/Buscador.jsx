@@ -3,7 +3,7 @@ import BarraBuscar from "../BarraBuscar/BarraBuscar";
 import MostrarAutores from '../MostrarAutores/MostrarAutores';
 import SeleccionadorOrdenar from '../SeleccionadorOrdenar/SeleccionadorOrdenar';
 import "./Buscador.css";
-import { Form } from 'react-bootstrap';
+import { Form, Container } from 'react-bootstrap';
 
 const Buscador = ({ autores }) => {
 
@@ -45,7 +45,7 @@ const Buscador = ({ autores }) => {
   //<SeleccionadorOrdenar onChange={(valor) => setGenero(valor)} values={valoresGenero}/>
 
   return (
-    <div>
+    <Container>
       <Form className='headerBusqueda'>
         <BarraBuscar onChange={(valor) => setBusqueda(valor)} />
         <div className='headerBusqueda__orden'>
@@ -54,7 +54,7 @@ const Buscador = ({ autores }) => {
         </div>
       </Form>
         <MostrarAutores autores={filtrarAutores()} formato="medio" />
-    </div>
+    </Container>
   );
 };
 

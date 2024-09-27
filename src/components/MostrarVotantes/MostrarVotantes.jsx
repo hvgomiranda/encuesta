@@ -1,13 +1,16 @@
 import React from 'react';
 import Votante from '../Votante/Votante';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
 
 const mostrarVotantes = ({ votantes }) => {
   return (
-
-    <div>
-      {votantes.map((votante, index) => (
-        <Votante key={index} votante={votante}/>
-      ))}
+    <div className='container'>
+      <Row className="g-1">
+        {votantes.map((votante, index) => (
+          <Votante key={index} votante={votante}/>
+        ))}
+      </Row>
     </div>
   )
 }

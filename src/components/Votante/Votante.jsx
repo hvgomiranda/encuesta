@@ -8,8 +8,8 @@ import "./Votante.css";
 const Votante = ( {votante} ) => {
     
     return(
-        <Card style={{ width: '18rem' }}>
-            <Card.Body>
+        <Card style={{ width: "18vw", marginBottom: "20px" }}>
+            <Card.Body className="d-flex flex-column justify-content-between">
                 <Card.Title>{votante.Nombre} {votante.Apellido}</Card.Title>
                 <ListGroup.Item>{votante.Nacionalidad}</ListGroup.Item>
                 <ListGroup.Item>{votante["Actividad principal"]}</ListGroup.Item>
