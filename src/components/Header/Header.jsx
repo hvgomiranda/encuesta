@@ -7,7 +7,7 @@ import Container from "react-bootstrap/Container";
 
 const Header = () => {
     return(
-        <Navbar expand="lg" sticky="top" className="header justify-content-between">
+        <Navbar expand="lg" sticky="top" className="header justify-content-between noselect">
             <Container>
                 <Navbar.Brand><Link  className="link" to="/">Encuesta de escritores</Link></Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />

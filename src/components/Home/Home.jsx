@@ -18,7 +18,7 @@ const Home = ( {autores} ) => {
 
     return(
         <Container>
-            <Container className="d-flex flex-column flex-wrap justify-content-center align-items-center" style={{height:"90vh"}}>
+            <Container className="d-flex flex-column flex-wrap justify-content-center align-items-center noselect" style={{height:"90vh"}}>
                 {text.map((el, i) => (
                     <motion.span
                         style={{ fontSize:"12vh",  marginRight: "2rem"}}
@@ -36,22 +36,22 @@ const Home = ( {autores} ) => {
             </Container>
 
             <Container className="container-home top-home">
-                <h1 style={{ padding:"20px" }} className="text-center">Los 10 más votados</h1>
+                <h1 style={{ padding:"20px" }} className="text-center noselect">Los 10 más votados</h1>
                 <MostrarAutores autores={topAutores()} formato={"grande"} />
             </Container>
 
             <Container className="container-home">
-                <h1 className="text-center">¿Quiénes votaron?</h1>
+                <h1 className="text-center noselect">¿Quiénes votaron?</h1>
                 <p className="text-home">Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique repellat doloribus perferendis quaerat? Incidunt adipisci pariatur neque, aliquid, fuga officia quam dolores ratione ut repellat delectus sit dolore cumque iure numquam quidem aperiam, ullam facilis quisquam dolor sed. Maiores commodi a nobis officia facere facilis, enim eligendi perferendis, dignissimos, fugiat dolorum ipsam distinctio cupiditate inventore hic totam rerum alias dolore!</p>
             </Container>
 
             <Container className="container-home">
-                <h1 className="text-center">La encuesta</h1>
+                <h1 className="text-center noselect">La encuesta</h1>
                 <p className="text-home">Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique repellat doloribus perferendis quaerat? Incidunt adipisci pariatur neque, aliquid, fuga officia quam dolores ratione ut repellat delectus sit dolore cumque iure numquam quidem aperiam, ullam facilis quisquam dolor sed. Maiores commodi a nobis officia facere facilis, enim eligendi perferendis, dignissimos, fugiat dolorum ipsam distinctio cupiditate inventore hic totam rerum alias dolore!</p>
             </Container>
 
             <Container className="container-home">
-                <h1 className="text-center">Desmadres</h1>
+                <h1 className="text-center noselect">Desmadres</h1>
                 <p className="text-home">Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique repellat doloribus perferendis quaerat? Incidunt adipisci pariatur neque, aliquid, fuga officia quam dolores ratione ut repellat delectus sit dolore cumque iure numquam quidem aperiam, ullam facilis quisquam dolor sed. Maiores commodi a nobis officia facere facilis, enim eligendi perferendis, dignissimos, fugiat dolorum ipsam distinctio cupiditate inventore hic totam rerum alias dolore!</p>
             </Container>
         </Container>

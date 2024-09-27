@@ -18,7 +18,7 @@ const Footer = () => {
                 </a>
                 <a className="link d-flex align-items-center ms-5"  href="mailto:info@desmadres.org" target="_blank" rel="noreferrer">
                     <MdOutlineEmail size={40} />
-                    <h2 style={{ marginLeft: '10px', fontSize: '2rem' }}>info@desmadres.org</h2>
+                    <p className="footer-correo">info@desmadres.org</p>
                 </a>
             </Container>
         </Navbar>

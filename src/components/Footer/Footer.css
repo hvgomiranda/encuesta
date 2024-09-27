@@ -6,3 +6,12 @@
     justify-content: space-between;
     padding: 10px 20px;
 }
+
+.footer-correo{
+    margin-left: 10px;
+    font-size: 2rem;
+}
+
+.footer-correo::selection{
+    color: green;
+}
