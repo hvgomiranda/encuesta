@@ -19,7 +19,7 @@ function App() {
       <Header/>
       <Container>
       <Routes>
-        <Route path="/encuesta" element={<Home autores={datos} />}></Route>
+        <Route path="/" element={<Home autores={datos} />}></Route>
         <Route path="/autor/:autorID" element={<DetalleAutor/>}></Route>
         <Route path="/votante/:votanteID" element={<DetalleVotante/>}></Route>
         <Route path="/buscarAutores" element={<Buscador autores={datos} />}></Route>
